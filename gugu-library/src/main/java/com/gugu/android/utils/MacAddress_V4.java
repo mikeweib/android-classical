@@ -1,11 +1,8 @@
-package com.gugu.android;
+package com.gugu.android.utils;
 
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-
-import java.net.NetworkInterface;
-import java.net.SocketException;
 
 public class MacAddress_V4 extends MacAddressUtil {
 

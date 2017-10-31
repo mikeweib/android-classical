@@ -5,12 +5,12 @@ import android.content.Context;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 
-public class MacAddress_V24 extends MacAddressUtil {
+final class MacAddress_V24 extends MacAddressUtil {
 
     String getMac(Context context) {
-        String macAddress = null;
-        StringBuffer buf = new StringBuffer();
-        NetworkInterface networkInterface = null;
+        String macAddress;
+        StringBuilder buf = new StringBuilder();
+        NetworkInterface networkInterface;
         try {
             networkInterface = NetworkInterface.getByName("eth1");
             if (networkInterface == null) {

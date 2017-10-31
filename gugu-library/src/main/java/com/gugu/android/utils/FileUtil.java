@@ -10,23 +10,11 @@ import java.io.InputStream;
 
 public final class FileUtil {
 
-    /**
-     * 删除单个文件
-     *
-     * @param filePath 被删除文件的文件名
-     * @return 文件删除成功返回true，否则返回false
-     */
     public static boolean deleteFile(String filePath) {
         File file = new File(filePath);
         return file.isFile() && file.exists() && file.delete();
     }
 
-    /**
-     * 删除文件夹以及目录下的文件
-     *
-     * @param filePath 被删除目录的文件路径
-     * @return 目录删除成功返回true，否则返回false
-     */
     public boolean deleteDirectory(String filePath) {
         //如果filePath不以文件分隔符结尾，自动添加文件分隔符
         if (!filePath.endsWith(File.separator)) {
@@ -124,11 +112,6 @@ public final class FileUtil {
         return buffer;
     }
 
-    /**
-     * 文件流转成byte数组
-     *
-     * @return
-     */
     public static byte[] input2byte(InputStream inStream) throws IOException {
         ByteArrayOutputStream swapStream = new ByteArrayOutputStream();
         byte[] buff = new byte[100];
@@ -140,11 +123,6 @@ public final class FileUtil {
         return HexUtil.getByteArray(hexStr);
     }
 
-    /**
-     * byte数组转成 文件流
-     *
-     * @return
-     */
     public static InputStream byte2Input(byte[] buf) {
         return new ByteArrayInputStream(buf);
     }

@@ -1,4 +1,4 @@
-package com.gugu.android;
+package com.gugu.android.utils;
 
 import android.content.Context;
 

@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 apply plugin: 'com.novoda.bintray-release'
 
+def version = '1.0.1'
+
 android {
     compileSdkVersion 27
     buildToolsVersion "27.0.0"
@@ -11,7 +13,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.1"
+        versionName version
 
     }
     lintOptions {
@@ -27,7 +29,7 @@ publish {
     userOrg = 'mikeweib'
     groupId = 'com.gugu.android'
     artifactId = 'android-classical'
-    publishVersion = '1.0.1'
+    publishVersion = version
     desc = 'A powerful android classical utils library.'
     website = 'https://github.com/mikeweib/android-classical'
 }
